@@ -1,0 +1,185 @@
+:root {
+  --abu-tua: #393E46;
+  --abu-abu: #929AAB;
+  --abu-muda: #EEEEEE;
+  --hitam: #000;
+  --putih: #fff;
+  --putih-tua: #d6d5d5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Sans-Serif;
+}
+
+.conten {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--abu-tua);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--abu-abu);
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3.5rem;
+}
+
+.image img {
+  width: 300px;
+  height: 300px;
+}
+
+.inbox {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  margin-top: -0.3rem;
+  padding: 1rem 0;
+  width: 100%;
+  gap: 1.3rem;
+}
+
+.box {
+  width: 130px;
+  height: 130px;
+  background-color: var(--putih);
+  border-radius: 10%;
+  border: 2px solid var(--abu-tua);
+  box-shadow: 0 0 5px var(--abu-muda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  transition: all 0.5s;
+}
+
+.box:hover {
+  background-color: var(--putih-tua);
+}
+
+.box img {
+  width: 60px;
+  height: 60px;
+}
+
+.box h1 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--hitam);
+  text-transform: capitalize;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contai {
+  width: 100%;
+  background-color: var(--abu-tua);
+  padding-bottom: 1rem;
+}
+
+.card-surat {
+  box-shadow: 0 0 5px var(--putih);
+  border: 2px solid var(--abu-tua);
+  cursor: pointer;
+}
+
+.card-isi-surat {
+  padding: 0 1rem;
+  transition: all 0.5s;
+}
+
+.card-hover {
+  transition: all 0.5s;
+}
+
+.card-hover:hover {
+  background: var(--putih-tua);
+}
+
+.box-surat {
+  padding: 0 1.2rem;
+}
+
+#btn-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+#btn-pause {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(min-width: 500px) {
+  .conten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 6rem;
+  }
+
+  .image {
+    margin-top: 5rem;
+  }
+
+  .image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .inbox {
+    margin-top: -1rem;
+  }
+
+  .box {
+    width: 350px;
+    height: 120px;
+    border-radius: 15px;
+    padding: 1.1rem;
+    cursor: pointer;
+  }
+
+  .box h1 {
+    font-size: 1.1rem;
+  }
+
+  .card-isi-surat {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .incard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1.5rem;
+  }
+}
