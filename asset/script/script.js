@@ -2,9 +2,9 @@ function getSurat() {
   fetch('https://equran.id/api/surat')
     .then(response => response.json())
     .then(response => {
-      let surat = '';
+      let isiSurat = '';
       response.forEach(ns => {
-        surat += `
+        isiSurat += `
         <div class="card mb-4 card-surat card-hover" onclick=" location.href='baca-surat.html?nomorsurat=${ns.nomor}' ">
                 <div class="card-body nama-ayat">
                   <h3 class="card-title">${ns.nomor}. ${ns.nama_latin}</h3>
@@ -14,8 +14,7 @@ function getSurat() {
               </div>
       `;
       })
-      const namaSurat = document.querySelector(".card-isi-surat");
-      namaSurat.innerHTML = surat;
+      document.querySelector(".card-isi-surat").innerHTML = isiSurat;
     });
 }
 

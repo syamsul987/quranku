@@ -1,23 +1,21 @@
-function getNama() {
-    fetch('https://equran.id/api/surat')
-    .then(response => response.json())
-    .then(response => {
-      let nama = '';
-      response.forEach( e => {
-        nama += `
-        <div class="card mb-4">
-        <div class="card-body">
-            <h2>${e.arab}</h2>
-            <h5>arab</h5>
-            <p>latin</p>
-            <p>arti</p>
-        </div>
+async function asmaul() {
+  const url = await fetch('https://asmaul-husna-api.vercel.app/api/all')
+  const { data } = await url.json()
+
+  let asmaulHusna = '';
+  data.forEach(e => {
+    asmaulHusna += `
+    <div class="card mb-4 text-center">
+      <div class="card-body">
+        <p class="text-start">${e.urutan}</p>
+        <h2 class="mb-4">${e.arab}</h2>
+        <h5>${e.latin}</h5>
+        <p>${e.arti}</p>
+      </div>
     </div>
-        `  
-      });
-        console.log(response)
+    `;
   })
-  }
-  
-  getNama()
-// https://asmaul-husna-api.vercel.app/api/all
+  document.querySelector('.asmaul-husna').innerHTML = asmaulHusna;
+}
+
+asmaul()
