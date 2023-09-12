@@ -19,13 +19,21 @@ body {
   font-family:Sans-Serif;
 }
 
-.conten {
+.conten1 {
   position: relative;
+  padding-bottom: 1rem;
   width: 100%;
   height: 100vh;
-  padding-bottom: 1rem;
   background-color: var(--abu-tua);
 }
+
+.conten {
+  width: 100%;
+  background-color: var(--abu-tua);
+  padding-bottom: 1rem;
+}
+
+
 
 .navbar {
   position: fixed;
@@ -139,13 +147,11 @@ svg {
 }
 
 @media(min-width: 500px) {
-  .conten {
+  .conten1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 0.6rem;
-    overflow: hidden;
   }
 
   .image {
@@ -159,6 +165,8 @@ svg {
 
   .inbox {
     margin-top: -1rem;
+    padding-bottom: 2rem;
+    /* background-color: tomato; */
   }
 
   .box {
