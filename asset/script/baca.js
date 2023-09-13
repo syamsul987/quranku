@@ -46,7 +46,7 @@ function getSurat() {
             let isiSurat = ''
             surat.forEach(nr => {
                 isiSurat += `
-                <div class="card mt-5 mb-4">
+                <div class="card mt-5 mb-4 mx-1">
                     <div class="card-body"
                         <p>${nr.nomor}</p>
                         <h3 class=" mb-4 text-end">${nr.ar}</h3>

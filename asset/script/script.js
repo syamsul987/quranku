@@ -5,7 +5,7 @@ function getSurat() {
       let insurat = '';
       response.forEach(ns => {
         insurat += `
-        <div class="card mb-4 card-surat card-hover" onclick=" location.href='baca-surat.html?nomorsurat=${ns.nomor}' ">
+        <div class="card mb-4 card-surat card-hover mx-4" onclick=" location.href='baca-surat.html?nomorsurat=${ns.nomor}' ">
                 <div class="card-body nama-ayat">
                   <h3 class="card-title">${ns.nomor}. ${ns.nama_latin}</h3>
                   <h3 class="mb-2 text-end">${ns.nama}</h3>
